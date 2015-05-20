@@ -1,0 +1,304 @@
+16:01:18 **** Build of configuration Default for project LGC_SmpleClent ****
+make all 
+g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
+g++ -o LGC_SmpleClent LGC_SmpleClent.o 
+16:01:30 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+make: Nothing to be done for `all'.
+16:33:27 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
+LGC_SmpleClent.cpp: In function ‘int main()’:
+LGC_SmpleClent.cpp:23:7: warning: unused variable ‘buffer’ [-Wunused-variable]
+  char buffer[200];
+       ^
+LGC_SmpleClent.cpp:24:6: warning: unused variable ‘bytes_rcv’ [-Wunused-variable]
+  int bytes_rcv;
+      ^
+LGC_SmpleClent.cpp:25:7: warning: unused variable ‘cmd’ [-Wunused-variable]
+  char cmd [30];
+       ^
+LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
+LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+  write(sock, sndLine,strlen(sndLine));
+                                      ^
+g++ -o LGC_SmpleClent LGC_SmpleClent.o 
+16:33:52 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
+LGC_SmpleClent.cpp: In function ‘int main()’:
+LGC_SmpleClent.cpp:23:7: warning: unused variable ‘buffer’ [-Wunused-variable]
+  char buffer[200];
+       ^
+LGC_SmpleClent.cpp:24:6: warning: unused variable ‘bytes_rcv’ [-Wunused-variable]
+  int bytes_rcv;
+      ^
+LGC_SmpleClent.cpp:25:7: warning: unused variable ‘cmd’ [-Wunused-variable]
+  char cmd [30];
+       ^
+LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
+LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+  write(sock, sndLine,strlen(sndLine));
+                                      ^
+g++ -o LGC_SmpleClent LGC_SmpleClent.o 
+16:34:49 **** Incremental Build of configuration Debug for project lgs ****
+make all 
+make: Nothing to be done for `all'.
+16:35:05 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+make: Nothing to be done for `all'.
+16:36:51 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+make: Nothing to be done for `all'.
+16:53:57 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
+LGC_SmpleClent.cpp: In function ‘int main()’:
+LGC_SmpleClent.cpp:45:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  sprintf("hello",buffer);
+                        ^
+LGC_SmpleClent.cpp:45:24: warning: format not a string literal and no format arguments [-Wformat-security]
+LGC_SmpleClent.cpp:48:15: warning: format not a string literal and no format arguments [-Wformat-security]
+  printf(buffer);
+               ^
+LGC_SmpleClent.cpp:49:13: warning: comparison with string literal results in unspecified behaviour [-Waddress]
+  while(cmd!="end"){
+             ^
+LGC_SmpleClent.cpp: At global scope:
+LGC_SmpleClent.cpp:53:7: error: expected constructor, destructor, or type conversion before ‘(’ token
+  close(sock);
+       ^
+LGC_SmpleClent.cpp:54:2: error: expected unqualified-id before ‘return’
+  return 0;
+  ^
+LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
+LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+  write(sock, sndLine,strlen(sndLine));
+                                      ^
+LGC_SmpleClent.cpp: In function ‘int main()’:
+LGC_SmpleClent.cpp:46:35: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+  write(sock,buffer,strlen(buffer));
+                                   ^
+LGC_SmpleClent.cpp:47:34: warning: ignoring return value of ‘ssize_t read(int, void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+  read(sock,buffer,strlen(buffer));
+                                  ^
+make: *** [LGC_SmpleClent.o] Error 1
+17:05:32 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
+LGC_SmpleClent.cpp: In function ‘int main()’:
+LGC_SmpleClent.cpp:43:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  sprintf("hello",buffer);
+                        ^
+LGC_SmpleClent.cpp:43:24: warning: format not a string literal and no format arguments [-Wformat-security]
+LGC_SmpleClent.cpp:46:15: warning: format not a string literal and no format arguments [-Wformat-security]
+  printf(buffer);
+               ^
+LGC_SmpleClent.cpp:23:7: warning: unused variable ‘cmd’ [-Wunused-variable]
+  char cmd [30];
+       ^
+LGC_SmpleClent.cpp:44:10: warning: unused variable ‘w’ [-Wunused-variable]
+  ssize_t w =write(sock,buffer,sizeof(buffer));
+          ^
+LGC_SmpleClent.cpp:45:10: warning: unused variable ‘r’ [-Wunused-variable]
+  ssize_t r = read(sock,buffer,sizeof(buffer));
+          ^
+LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
+LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+  write(sock, sndLine,strlen(sndLine));
+                                      ^
+g++ -o LGC_SmpleClent LGC_SmpleClent.o 
+17:05:40 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+make: Nothing to be done for `all'.
+17:06:51 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
+LGC_SmpleClent.cpp: In function ‘int main()’:
+LGC_SmpleClent.cpp:43:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  sprintf("hello",buffer);
+                        ^
+LGC_SmpleClent.cpp:43:24: warning: format not a string literal and no format arguments [-Wformat-security]
+LGC_SmpleClent.cpp:46:15: warning: format not a string literal and no format arguments [-Wformat-security]
+  printf(buffer);
+               ^
+LGC_SmpleClent.cpp:23:7: warning: unused variable ‘cmd’ [-Wunused-variable]
+  char cmd [30];
+       ^
+LGC_SmpleClent.cpp:44:10: warning: unused variable ‘w’ [-Wunused-variable]
+  ssize_t w =write(sock,buffer,sizeof(buffer));
+          ^
+LGC_SmpleClent.cpp:45:10: warning: unused variable ‘r’ [-Wunused-variable]
+  ssize_t r = read(sock,buffer,sizeof(buffer));
+          ^
+LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
+LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+  write(sock, sndLine,strlen(sndLine));
+                                      ^
+g++ -o LGC_SmpleClent LGC_SmpleClent.o 
+17:07:46 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
+LGC_SmpleClent.cpp: In function ‘int main()’:
+LGC_SmpleClent.cpp:43:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  sprintf("hello",buffer);
+                        ^
+LGC_SmpleClent.cpp:43:24: warning: format not a string literal and no format arguments [-Wformat-security]
+LGC_SmpleClent.cpp:46:15: warning: format not a string literal and no format arguments [-Wformat-security]
+  printf(buffer);
+               ^
+LGC_SmpleClent.cpp:23:7: warning: unused variable ‘cmd’ [-Wunused-variable]
+  char cmd [30];
+       ^
+LGC_SmpleClent.cpp:44:10: warning: unused variable ‘w’ [-Wunused-variable]
+  ssize_t w =write(sock,buffer,sizeof(buffer));
+          ^
+LGC_SmpleClent.cpp:45:10: warning: unused variable ‘r’ [-Wunused-variable]
+  ssize_t r = read(sock,buffer,sizeof(buffer));
+          ^
+LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
+LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+  write(sock, sndLine,strlen(sndLine));
+                                      ^
+g++ -o LGC_SmpleClent LGC_SmpleClent.o 
+17:08:46 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
+LGC_SmpleClent.cpp: In function ‘int main()’:
+LGC_SmpleClent.cpp:41:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  sprintf("hello",buffer);
+                        ^
+LGC_SmpleClent.cpp:41:24: warning: format not a string literal and no format arguments [-Wformat-security]
+LGC_SmpleClent.cpp:44:15: warning: format not a string literal and no format arguments [-Wformat-security]
+  printf(buffer);
+               ^
+LGC_SmpleClent.cpp:42:10: warning: unused variable ‘w’ [-Wunused-variable]
+  ssize_t w =write(sock,buffer,sizeof(buffer));
+          ^
+LGC_SmpleClent.cpp:43:10: warning: unused variable ‘r’ [-Wunused-variable]
+  ssize_t r = read(sock,buffer,sizeof(buffer));
+          ^
+LGC_SmpleClent.cpp:23:7: warning: unused variable ‘cmd’ [-Wunused-variable]
+  char cmd [30];
+       ^
+LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
+LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+  write(sock, sndLine,strlen(sndLine));
+                                      ^
+g++ -o LGC_SmpleClent LGC_SmpleClent.o 
+17:09:47 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+make: Nothing to be done for `all'.
+17:14:30 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+make: Nothing to be done for `all'.
+17:15:37 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+make: Nothing to be done for `all'.
+17:15:44 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+make: Nothing to be done for `all'.
+17:17:32 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
+LGC_SmpleClent.cpp: In function ‘int main()’:
+LGC_SmpleClent.cpp:41:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  sprintf("hello",buffer);
+                        ^
+LGC_SmpleClent.cpp:41:24: warning: format not a string literal and no format arguments [-Wformat-security]
+LGC_SmpleClent.cpp:44:15: warning: format not a string literal and no format arguments [-Wformat-security]
+  printf(buffer);
+               ^
+LGC_SmpleClent.cpp:42:10: warning: unused variable ‘w’ [-Wunused-variable]
+  ssize_t w =write(sock,buffer,sizeof(buffer));
+          ^
+LGC_SmpleClent.cpp:43:10: warning: unused variable ‘r’ [-Wunused-variable]
+  ssize_t r = read(sock,buffer,sizeof(buffer));
+          ^
+LGC_SmpleClent.cpp:22:6: warning: unused variable ‘bytes_rcv’ [-Wunused-variable]
+  int bytes_rcv;
+      ^
+LGC_SmpleClent.cpp:23:7: warning: unused variable ‘cmd’ [-Wunused-variable]
+  char cmd [30];
+       ^
+LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
+LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+  write(sock, sndLine,strlen(sndLine));
+                                      ^
+g++ -o LGC_SmpleClent LGC_SmpleClent.o 
+17:20:23 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
+LGC_SmpleClent.cpp: In function ‘int main()’:
+LGC_SmpleClent.cpp:41:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  sprintf("hello",buffer);
+                        ^
+LGC_SmpleClent.cpp:41:24: warning: format not a string literal and no format arguments [-Wformat-security]
+LGC_SmpleClent.cpp:42:10: warning: unused variable ‘w’ [-Wunused-variable]
+  ssize_t w =write(sock,buffer,sizeof(buffer));
+          ^
+LGC_SmpleClent.cpp:43:10: warning: unused variable ‘r’ [-Wunused-variable]
+  ssize_t r = read(sock,buffer,sizeof(buffer));
+          ^
+LGC_SmpleClent.cpp:22:6: warning: unused variable ‘bytes_rcv’ [-Wunused-variable]
+  int bytes_rcv;
+      ^
+LGC_SmpleClent.cpp:23:7: warning: unused variable ‘cmd’ [-Wunused-variable]
+  char cmd [30];
+       ^
+LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
+LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+  write(sock, sndLine,strlen(sndLine));
+                                      ^
+g++ -o LGC_SmpleClent LGC_SmpleClent.o 
+17:23:23 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
+LGC_SmpleClent.cpp: In function ‘int main()’:
+LGC_SmpleClent.cpp:42:10: warning: unused variable ‘w’ [-Wunused-variable]
+  ssize_t w =write(sock,buffer,sizeof(buffer));
+          ^
+LGC_SmpleClent.cpp:43:10: warning: unused variable ‘r’ [-Wunused-variable]
+  ssize_t r = read(sock,buffer,sizeof(buffer));
+          ^
+LGC_SmpleClent.cpp:22:6: warning: unused variable ‘bytes_rcv’ [-Wunused-variable]
+  int bytes_rcv;
+      ^
+LGC_SmpleClent.cpp:23:7: warning: unused variable ‘cmd’ [-Wunused-variable]
+  char cmd [30];
+       ^
+LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
+LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+  write(sock, sndLine,strlen(sndLine));
+                                      ^
+g++ -o LGC_SmpleClent LGC_SmpleClent.o 
+17:24:50 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+make: Nothing to be done for `all'.
+17:25:22 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+make: Nothing to be done for `all'.
+17:26:37 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
+LGC_SmpleClent.cpp: In function ‘int main()’:
+LGC_SmpleClent.cpp:22:6: warning: unused variable ‘bytes_rcv’ [-Wunused-variable]
+  int bytes_rcv;
+      ^
+LGC_SmpleClent.cpp:23:7: warning: unused variable ‘cmd’ [-Wunused-variable]
+  char cmd [30];
+       ^
+LGC_SmpleClent.cpp:42:10: warning: unused variable ‘w’ [-Wunused-variable]
+  ssize_t w =write(sock,buffer,sizeof(buffer));
+          ^
+LGC_SmpleClent.cpp:43:10: warning: unused variable ‘r’ [-Wunused-variable]
+  ssize_t r = read(sock,buffer,sizeof(buffer));
+          ^
+LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
+LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+  write(sock, sndLine,strlen(sndLine));
+                                      ^
+g++ -o LGC_SmpleClent LGC_SmpleClent.o 
+17:29:57 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make all 
+make: Nothing to be done for `all'.

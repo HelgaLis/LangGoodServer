@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <errno.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+
+
+int main()
+{
+    char buffer[200];
+    int bytes_rcv;
+    char[30] cmd;
+    struct sockaddr_in addr;
+    int socketInit;
+    if((socketInit = socket(AF_INET, SOCK_STREAM,0))<0){
+       perror("socket call failed");
+       exit(1);
+       }
+addr.sin_family=AF_INET;
+addr.sin_port = htons(6566);
+addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
+if((connect(socketInit,(struct sockaddr*)&addr,sizeof(addr)))<0){
+perror("Connection failure");
+exit(2);}
+printf("Connected\n");
+bytes_rcv = write(socketInit,buffer,sizeof(buffer));
+buffer[bytes_rcv] = (char)0;
+if(bytes_rcv<=0||(strcmp(buffer,"Text Statistics server\n"))!=0){
+printf("Protocol error. Recieved msg is %s",buffer);
+exit(1);
+}
+while(cmd!="end"){
+}
+close(socketInit);
+return 0;
+}

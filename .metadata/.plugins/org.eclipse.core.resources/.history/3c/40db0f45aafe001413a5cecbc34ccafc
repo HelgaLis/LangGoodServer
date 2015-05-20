@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdarg.h>
+#include <string.h>
+#include <errno.h>
+#include <netdb.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+void error(int status, int num, char* msg){
+
+}
+int main()
+{
+	struct sockaddr_in local;
+	int sock, socketRun, socketAccept;
+	char buffer[300];
+	char cmd[20];
+	local.sin_family=AF_INET;
+	local.sin_port = htons(7054);
+	local.sin_addr.s_addr = htonl(INADDR_ANY);
+	sock = socket(AF_INET, SOCK_STREAM,0);
+	if(!isvalidsock(sock)){
+		error(1, errno, "socket call failed");
+		if((socketRun = bind(sock,(struct sockaddr*)&local,sizeof(local)))<0)
+			error(1, errno,"bind call failure");
+		socketRun = listen(sock,1);
+		if(socketRun)
+			error(1,errno,"listen call failed");
+		if((socketAccept=accept(sock,NULL,NULL))<0)
+			error(1, errno,"accept call failed");
+		sprintf(buffer, "Text Statistics server\n");
+		if((socketRun =send (socketAccept,buffer,strlen(buffer),0))<0)
+			error(1, errno,"socket call failed");
+		close(socketAccept);
+		exit(0);
+
+	}}
