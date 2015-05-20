@@ -8,7 +8,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #define isvalidsock(s) ( ( s ) >= 0 )
-void error(int status, int err, char* msg){
+void error(int status, int err,const char* msg){
   printf(msg,"%s \n");
   if ( err )
      fprintf( stderr, ": %s (%d)\n", strerror( err ), err);
@@ -21,17 +21,21 @@ void error(int status, int err, char* msg){
 int main()
 {
 	struct sockaddr_in local;
-	int sock,  socketAccept;
+	int sock,  socketAccept,rs;
 	char buffer[300];
 	char cmd[20];
+	const int on = 1;
 	local.sin_family=AF_INET;
-	local.sin_port = htons(7054);
+	local.sin_port = htons(8656);
 	local.sin_addr.s_addr = htonl(INADDR_ANY);
 	sock = socket(AF_INET, SOCK_STREAM,0);
 	if(!isvalidsock(sock))
 		error(1, errno, "socket call failed");
-	if(bind(sock,(struct sockaddr*)&local,sizeof(local)))
-		error(1, errno,"bind call failure");
+	if ( setsockopt( sock, SOL_SOCKET, SO_REUSEADDR, &on,sizeof( on ) ) )
+		   error( 1, errno, "ошибка вызова setsockopt" );
+	rs = bind(sock,(struct sockaddr*)&local,sizeof(local));
+	if(rs<0)
+	   error(1, errno,"bind call failure");
 
 	if(listen(sock,1))
 		error(1,errno,"listen call failed");
@@ -40,13 +44,13 @@ int main()
 	sprintf(buffer, "Text Statistics server\n");
 	if(write(socketAccept,buffer,strlen(buffer))<0)
 		error(1, errno,"send call failed");
-	for(;;){
+
 	ssize_t n =	read(socketAccept, buffer, strlen(buffer));
 	if(n<=0){
 		write(socketAccept,buffer,strlen(buffer));
 	}
 	close(socketAccept);
-
-	}
 	exit(0);
-}
+	}
+
+
