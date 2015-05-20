@@ -8,7 +8,14 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #define isvalidsock(s) ( ( s ) >= 0 )
-void error(int status, int num, char* msg){
+void error(int status, int err, char* msg){
+  printf(msg,"%s \n");
+  if ( err )
+     fprintf( stderr, ": %s (%d)\n", strerror( err ), err);
+
+  if ( status )
+     exit( status );
+
 
 }
 int main()
@@ -36,10 +43,10 @@ int main()
 	for(;;){
 	ssize_t n =	read(socketAccept, buffer, strlen(buffer));
 	if(n<=0){
-
+		write(socketAccept,buffer,strlen(buffer));
 	}
 	close(socketAccept);
-	exit(0);
-	}
 
+	}
+	exit(0);
 }
