@@ -1,39 +1,45 @@
 #include <stdio.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <errno.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdarg.h>
 #include <string.h>
+#include <errno.h>
+#include <netdb.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#define isvalidsock(s) ( ( s ) >= 0 )
+void error(int status, int num, char* msg){
+
+}
 int main()
 {
-struct sockaddr_in local;
-int socketInit, socketRun, socketAccept;
-char buffer[300];
-char cmd[20];
-local.sin_family=AF_INET;
-local.sin_port = htons(7054);
-local.sin_addr.s_addr = htonl(INADDR_ANY);
+	struct sockaddr_in local;
+	int sock,  socketAccept;
+	char buffer[300];
+	char cmd[20];
+	local.sin_family=AF_INET;
+	local.sin_port = htons(7054);
+	local.sin_addr.s_addr = htonl(INADDR_ANY);
+	sock = socket(AF_INET, SOCK_STREAM,0);
+	if(!isvalidsock(sock))
+		error(1, errno, "socket call failed");
+	if(bind(sock,(struct sockaddr*)&local,sizeof(local)))
+		error(1, errno,"bind call failure");
 
-if((socketInit = socket(AF_INET, SOCK_STREAM,0))<0){
-perror("socket call failed");
-exit(1);
-if((socketRun = bind(socketInit,(struct sockaddr*)&local,sizeof(local)))<0){
-perror("bind call failure");
-exit(1);
+	if(listen(sock,1))
+		error(1,errno,"listen call failed");
+	if((socketAccept=accept(sock,NULL,NULL))<0)
+		error(1, errno,"accept call failed");
+	sprintf(buffer, "Text Statistics server\n");
+	if(write(socketAccept,buffer,strlen(buffer))<0)
+		error(1, errno,"send call failed");
+	for(;;){
+	ssize_t n =	read(socketAccept, buffer, strlen(buffer));
+	if(n<=0){
+
+	}
+	close(socketAccept);
+	exit(0);
+	}
+
 }
-socketRun = listen(socketInit,1);
-if(socketRun){
-perror("listen call failed");
-exit(1);}
-if((socketAccept=accept(socketInit,NULL,NULL))<0){
-perror("accept call failed");
-exit(1);}
-sprintf(buffer, "Text Statistics server\n");
-if((socketRun =send (socketAccept,buffer,strlen(buffer),0))<0)
-    perror("socket call failed");
-close(socketAccept);
-exit(0);
-
-}}
