@@ -12,7 +12,7 @@
 typedef std::map<std::wstring,uint> Statistic;
 Statistic curr_statistic;
 
-void update_statistic_status();
+void update_statistic_status(std::wstring word);
 void calculate_statistic();
 void clear_statistic_data();
 
