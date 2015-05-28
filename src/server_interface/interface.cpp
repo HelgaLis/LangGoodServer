@@ -7,12 +7,14 @@
 
 #include "interface.h"
 #include "../global.h"
+#include "commands.h"
 #include <unistd.h>
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <iostream>
 #include <string.h>
+#include  <map>
 #include <sstream>
 using namespace std;
 
@@ -69,7 +71,12 @@ void start_engine() {
 	while(!(exit)){
 string line = read_line();
 string possible_cmd = getFirstWord(line);
-
+if(server_cmd.find(possible_cmd)!=server_cmd.end()){
+	curr_line = line;
+	*server_cmd[possible_cmd];
+	if(possible_cmd==std::string("exit"))
+		exit = true;
+}
 exit = true;
 }}
 

@@ -8,14 +8,20 @@
 #ifndef SRC_SERVER_INTERFACE_COMMANDS_H_
 #define SRC_SERVER_INTERFACE_COMMANDS_H_
 #include <map>
-
+#include <iostream>
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+typedef void (*s_cmd)(void);
+std::string curr_line;
+std::map<std::string,s_cmd> server_cmd;
 void set_text_cmd();
 void set_line_cmd();
 void getSavedStatisticsFileList();
 const void save_cmd();
 void append_cmd();
-void load_cmd();
-void exit_cmd();
+const void load_cmd();
+const void exit_cmd();
 void initialize_cmd();
 
 
