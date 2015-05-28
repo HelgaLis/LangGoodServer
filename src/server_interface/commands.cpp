@@ -5,12 +5,21 @@
  *  Created on: May 28, 2015
  *      Author: helgalis
  */
+
 #include  "commands.h"
-void save_cmd(){}
+#include <map>
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+typedef void (*s_cmd)(void);
+//std::map<std::string,s_cmd> RegCmd;
+
+const void save_cmd(){}
 
 void register_server_cmd(){
-	ServerCmd server_cmd;
-	server_cmd["save"] =save_cmd;
+	std::map<std::string,s_cmd> server_cmd;
+	server_cmd.insert(std::make_pair("save",&save_cmd));
 }
 
 
