@@ -1,0 +1,12 @@
+/*
+ * interface.cpp
+ *
+ *  Created on: May 23, 2015
+ *      Author: helgalis
+ */
+#include "interface.h";
+#include "string.h";
+using namespace std;
+
+
+

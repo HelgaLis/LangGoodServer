@@ -1,304 +1,460 @@
-16:01:18 **** Build of configuration Default for project LGC_SmpleClent ****
+16:02:44 **** Build of configuration Debug for project lgs ****
 make all 
-g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
-g++ -o LGC_SmpleClent LGC_SmpleClent.o 
-16:01:30 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:10:27: warning: extra tokens at end of #include directive [enabled by default]
+ #include "create_socket.h";
+                           ^
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+In file included from ../src/server_interface/commands.cpp:8:0:
+../src/server_interface/commands.h:20:18: error: ‘string’ is not a member of ‘std’
+ typedef std::map<std::string,cmd> ServerCmd;
+                  ^
+../src/server_interface/commands.h:20:18: error: ‘string’ is not a member of ‘std’
+../src/server_interface/commands.h:20:33: error: template argument 1 is invalid
+ typedef std::map<std::string,cmd> ServerCmd;
+                                 ^
+../src/server_interface/commands.h:20:33: error: template argument 3 is invalid
+../src/server_interface/commands.h:20:33: error: template argument 4 is invalid
+../src/server_interface/commands.h:20:44: error: invalid type in declaration before ‘;’ token
+ typedef std::map<std::string,cmd> ServerCmd;
+                                            ^
+../src/server_interface/commands.cpp: In function ‘void register_server_cmd()’:
+../src/server_interface/commands.cpp:13:21: error: assignment of read-only location ‘"save"[server_cmd]’
+  server_cmd["save"] =save_cmd;
+                     ^
+../src/server_interface/commands.cpp:13:21: error: invalid conversion from ‘void (*)()’ to ‘char’ [-fpermissive]
+make: *** [src/server_interface/commands.o] Error 1
+16:04:13 **** Incremental Build of configuration Debug for project lgs ****
 make all 
-make: Nothing to be done for `all'.
-16:33:27 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+In file included from ../src/server_interface/commands.cpp:8:0:
+../src/server_interface/commands.h:12:18: error: ‘string’ is not a member of ‘std’
+ typedef std::map<std::string,cmd> ServerCmd;
+                  ^
+../src/server_interface/commands.h:12:18: error: ‘string’ is not a member of ‘std’
+../src/server_interface/commands.h:12:33: error: template argument 1 is invalid
+ typedef std::map<std::string,cmd> ServerCmd;
+                                 ^
+../src/server_interface/commands.h:12:33: error: template argument 3 is invalid
+../src/server_interface/commands.h:12:33: error: template argument 4 is invalid
+../src/server_interface/commands.h:12:44: error: invalid type in declaration before ‘;’ token
+ typedef std::map<std::string,cmd> ServerCmd;
+                                            ^
+../src/server_interface/commands.cpp: In function ‘void register_server_cmd()’:
+../src/server_interface/commands.cpp:13:21: error: assignment of read-only location ‘"save"[server_cmd]’
+  server_cmd["save"] =save_cmd;
+                     ^
+../src/server_interface/commands.cpp:13:21: error: invalid conversion from ‘void (*)()’ to ‘char’ [-fpermissive]
+make: *** [src/server_interface/commands.o] Error 1
+16:16:22 **** Incremental Build of configuration Debug for project lgs ****
 make all 
-g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
-LGC_SmpleClent.cpp: In function ‘int main()’:
-LGC_SmpleClent.cpp:23:7: warning: unused variable ‘buffer’ [-Wunused-variable]
-  char buffer[200];
-       ^
-LGC_SmpleClent.cpp:24:6: warning: unused variable ‘bytes_rcv’ [-Wunused-variable]
-  int bytes_rcv;
-      ^
-LGC_SmpleClent.cpp:25:7: warning: unused variable ‘cmd’ [-Wunused-variable]
-  char cmd [30];
-       ^
-LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
-LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-  write(sock, sndLine,strlen(sndLine));
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+../src/server_interface/commands.cpp: In function ‘void register_server_cmd()’:
+../src/server_interface/commands.cpp:14:11: error: ‘string’ is not a member of ‘std’
+  std::map<std::string,cmd> server_cmd;
+           ^
+../src/server_interface/commands.cpp:14:11: error: ‘string’ is not a member of ‘std’
+../src/server_interface/commands.cpp:14:26: error: template argument 1 is invalid
+  std::map<std::string,cmd> server_cmd;
+                          ^
+../src/server_interface/commands.cpp:14:26: error: template argument 3 is invalid
+../src/server_interface/commands.cpp:14:26: error: template argument 4 is invalid
+../src/server_interface/commands.cpp:14:38: error: invalid type in declaration before ‘;’ token
+  std::map<std::string,cmd> server_cmd;
                                       ^
-g++ -o LGC_SmpleClent LGC_SmpleClent.o 
-16:33:52 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
-make all 
-g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
-LGC_SmpleClent.cpp: In function ‘int main()’:
-LGC_SmpleClent.cpp:23:7: warning: unused variable ‘buffer’ [-Wunused-variable]
-  char buffer[200];
-       ^
-LGC_SmpleClent.cpp:24:6: warning: unused variable ‘bytes_rcv’ [-Wunused-variable]
-  int bytes_rcv;
-      ^
-LGC_SmpleClent.cpp:25:7: warning: unused variable ‘cmd’ [-Wunused-variable]
-  char cmd [30];
-       ^
-LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
-LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-  write(sock, sndLine,strlen(sndLine));
-                                      ^
-g++ -o LGC_SmpleClent LGC_SmpleClent.o 
-16:34:49 **** Incremental Build of configuration Debug for project lgs ****
-make all 
-make: Nothing to be done for `all'.
-16:35:05 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
-make all 
-make: Nothing to be done for `all'.
-16:36:51 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
-make all 
-make: Nothing to be done for `all'.
-16:53:57 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
-make all 
-g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
-LGC_SmpleClent.cpp: In function ‘int main()’:
-LGC_SmpleClent.cpp:45:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  sprintf("hello",buffer);
-                        ^
-LGC_SmpleClent.cpp:45:24: warning: format not a string literal and no format arguments [-Wformat-security]
-LGC_SmpleClent.cpp:48:15: warning: format not a string literal and no format arguments [-Wformat-security]
-  printf(buffer);
-               ^
-LGC_SmpleClent.cpp:49:13: warning: comparison with string literal results in unspecified behaviour [-Waddress]
-  while(cmd!="end"){
+../src/server_interface/commands.cpp:15:13: error: request for member ‘insert’ in ‘server_cmd’, which is of non-class type ‘int’
+  server_cmd.insert(std::make_pair("save",&save_cmd));
              ^
-LGC_SmpleClent.cpp: At global scope:
-LGC_SmpleClent.cpp:53:7: error: expected constructor, destructor, or type conversion before ‘(’ token
-  close(sock);
-       ^
-LGC_SmpleClent.cpp:54:2: error: expected unqualified-id before ‘return’
-  return 0;
-  ^
-LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
-LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-  write(sock, sndLine,strlen(sndLine));
-                                      ^
-LGC_SmpleClent.cpp: In function ‘int main()’:
-LGC_SmpleClent.cpp:46:35: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-  write(sock,buffer,strlen(buffer));
+make: *** [src/server_interface/commands.o] Error 1
+16:19:23 **** Incremental Build of configuration Debug for project lgs ****
+make all 
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+In file included from ../src/server_interface/commands.cpp:9:0:
+../src/server_interface/commands.h:12:18: error: ‘string’ is not a member of ‘std’
+ typedef std::map<std::string,cmd> ServerCmd;
+                  ^
+../src/server_interface/commands.h:12:18: error: ‘string’ is not a member of ‘std’
+../src/server_interface/commands.h:12:33: error: template argument 1 is invalid
+ typedef std::map<std::string,cmd> ServerCmd;
+                                 ^
+../src/server_interface/commands.h:12:33: error: template argument 3 is invalid
+../src/server_interface/commands.h:12:33: error: template argument 4 is invalid
+../src/server_interface/commands.h:12:44: error: invalid type in declaration before ‘;’ token
+ typedef std::map<std::string,cmd> ServerCmd;
+                                            ^
+../src/server_interface/commands.cpp: In function ‘void register_server_cmd()’:
+../src/server_interface/commands.cpp:15:13: error: request for member ‘insert’ in ‘server_cmd’, which is of non-class type ‘ServerCmd {aka int}’
+  server_cmd.insert(std::make_pair("save",&save_cmd));
+             ^
+make: *** [src/server_interface/commands.o] Error 1
+16:23:50 **** Incremental Build of configuration Debug for project lgs ****
+make all 
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+In file included from ../src/server_interface/commands.cpp:9:0:
+../src/server_interface/commands.h:12:18: error: ‘string’ is not a member of ‘std’
+ typedef std::map<std::string,cmd> ServerCmd;
+                  ^
+../src/server_interface/commands.h:12:18: error: ‘string’ is not a member of ‘std’
+../src/server_interface/commands.h:12:33: error: template argument 1 is invalid
+ typedef std::map<std::string,cmd> ServerCmd;
+                                 ^
+../src/server_interface/commands.h:12:33: error: template argument 3 is invalid
+../src/server_interface/commands.h:12:33: error: template argument 4 is invalid
+../src/server_interface/commands.h:12:44: error: invalid type in declaration before ‘;’ token
+ typedef std::map<std::string,cmd> ServerCmd;
+                                            ^
+../src/server_interface/commands.cpp: In function ‘void register_server_cmd()’:
+../src/server_interface/commands.cpp:15:13: error: request for member ‘insert’ in ‘server_cmd’, which is of non-class type ‘ServerCmd {aka int}’
+  server_cmd.insert(std::make_pair("save",&save_cmd));
+             ^
+make: *** [src/server_interface/commands.o] Error 1
+16:24:52 **** Incremental Build of configuration Debug for project lgs ****
+make all 
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+In file included from ../src/server_interface/commands.cpp:9:0:
+../src/server_interface/commands.h:12:18: error: ‘string’ is not a member of ‘std’
+ typedef std::map<std::string,cmd> ServerCmd;
+                  ^
+../src/server_interface/commands.h:12:18: error: ‘string’ is not a member of ‘std’
+../src/server_interface/commands.h:12:33: error: template argument 1 is invalid
+ typedef std::map<std::string,cmd> ServerCmd;
+                                 ^
+../src/server_interface/commands.h:12:33: error: template argument 3 is invalid
+../src/server_interface/commands.h:12:33: error: template argument 4 is invalid
+../src/server_interface/commands.h:12:44: error: invalid type in declaration before ‘;’ token
+ typedef std::map<std::string,cmd> ServerCmd;
+                                            ^
+../src/server_interface/commands.cpp: In function ‘void register_server_cmd()’:
+../src/server_interface/commands.cpp:15:13: error: request for member ‘insert’ in ‘server_cmd’, which is of non-class type ‘ServerCmd {aka int}’
+  server_cmd.insert(std::make_pair("save",&save_cmd));
+             ^
+make: *** [src/server_interface/commands.o] Error 1
+16:26:15 **** Incremental Build of configuration Debug for project lgs ****
+make all 
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+In file included from ../src/server_interface/commands.cpp:9:0:
+../src/server_interface/commands.h:12:18: error: ‘string’ is not a member of ‘std’
+ typedef std::map<std::string,cmd> RegCmd;
+                  ^
+../src/server_interface/commands.h:12:18: error: ‘string’ is not a member of ‘std’
+../src/server_interface/commands.h:12:33: error: template argument 1 is invalid
+ typedef std::map<std::string,cmd> RegCmd;
+                                 ^
+../src/server_interface/commands.h:12:33: error: template argument 3 is invalid
+../src/server_interface/commands.h:12:33: error: template argument 4 is invalid
+../src/server_interface/commands.h:12:41: error: invalid type in declaration before ‘;’ token
+ typedef std::map<std::string,cmd> RegCmd;
+                                         ^
+../src/server_interface/commands.cpp: In function ‘void register_server_cmd()’:
+../src/server_interface/commands.cpp:15:13: error: request for member ‘insert’ in ‘server_cmd’, which is of non-class type ‘RegCmd {aka int}’
+  server_cmd.insert(std::make_pair("save",&save_cmd));
+             ^
+make: *** [src/server_interface/commands.o] Error 1
+16:29:36 **** Incremental Build of configuration Debug for project lgs ****
+make all 
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+In file included from ../src/server_interface/commands.cpp:9:0:
+../src/server_interface/commands.h:12:18: error: ‘string’ is not a member of ‘std’
+ typedef std::map<std::string,cmd> RegCmd;
+                  ^
+../src/server_interface/commands.h:12:18: error: ‘string’ is not a member of ‘std’
+../src/server_interface/commands.h:12:33: error: template argument 1 is invalid
+ typedef std::map<std::string,cmd> RegCmd;
+                                 ^
+../src/server_interface/commands.h:12:33: error: template argument 3 is invalid
+../src/server_interface/commands.h:12:33: error: template argument 4 is invalid
+../src/server_interface/commands.h:12:41: error: invalid type in declaration before ‘;’ token
+ typedef std::map<std::string,cmd> RegCmd;
+                                         ^
+../src/server_interface/commands.cpp:12:18: error: ‘string’ is not a member of ‘std’
+ typedef std::map<std::string,cmd> RegCmd;
+                  ^
+../src/server_interface/commands.cpp:12:18: error: ‘string’ is not a member of ‘std’
+../src/server_interface/commands.cpp:12:33: error: template argument 1 is invalid
+ typedef std::map<std::string,cmd> RegCmd;
+                                 ^
+../src/server_interface/commands.cpp:12:33: error: template argument 3 is invalid
+../src/server_interface/commands.cpp:12:33: error: template argument 4 is invalid
+../src/server_interface/commands.cpp:12:41: error: invalid type in declaration before ‘;’ token
+ typedef std::map<std::string,cmd> RegCmd;
+                                         ^
+../src/server_interface/commands.cpp:13:8: error: redefinition of ‘RegCmd server_cmd’
+ RegCmd server_cmd;
+        ^
+In file included from ../src/server_interface/commands.cpp:9:0:
+../src/server_interface/commands.h:13:8: error: ‘RegCmd server_cmd’ previously declared here
+ RegCmd server_cmd;
+        ^
+../src/server_interface/commands.cpp: In function ‘void register_server_cmd()’:
+../src/server_interface/commands.cpp:18:13: error: request for member ‘insert’ in ‘server_cmd’, which is of non-class type ‘RegCmd {aka int}’
+  server_cmd.insert(std::make_pair("save",&save_cmd));
+             ^
+make: *** [src/server_interface/commands.o] Error 1
+16:31:26 **** Incremental Build of configuration Debug for project lgs ****
+make all 
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+In file included from ../src/server_interface/commands.cpp:9:0:
+../src/server_interface/commands.h:12:18: error: ‘string’ is not a member of ‘std’
+ typedef std::map<std::string,cmd> RegCmd;
+                  ^
+../src/server_interface/commands.h:12:18: error: ‘string’ is not a member of ‘std’
+../src/server_interface/commands.h:12:33: error: template argument 1 is invalid
+ typedef std::map<std::string,cmd> RegCmd;
+                                 ^
+../src/server_interface/commands.h:12:33: error: template argument 3 is invalid
+../src/server_interface/commands.h:12:33: error: template argument 4 is invalid
+../src/server_interface/commands.h:12:41: error: invalid type in declaration before ‘;’ token
+ typedef std::map<std::string,cmd> RegCmd;
+                                         ^
+../src/server_interface/commands.cpp:12:18: error: ‘string’ is not a member of ‘std’
+ typedef std::map<std::string,cmd> RegCmd;
+                  ^
+../src/server_interface/commands.cpp:12:18: error: ‘string’ is not a member of ‘std’
+../src/server_interface/commands.cpp:12:33: error: template argument 1 is invalid
+ typedef std::map<std::string,cmd> RegCmd;
+                                 ^
+../src/server_interface/commands.cpp:12:33: error: template argument 3 is invalid
+../src/server_interface/commands.cpp:12:33: error: template argument 4 is invalid
+../src/server_interface/commands.cpp:12:41: error: invalid type in declaration before ‘;’ token
+ typedef std::map<std::string,cmd> RegCmd;
+                                         ^
+../src/server_interface/commands.cpp: In function ‘void register_server_cmd()’:
+../src/server_interface/commands.cpp:18:13: error: request for member ‘insert’ in ‘server_cmd’, which is of non-class type ‘RegCmd {aka int}’
+  server_cmd.insert(std::make_pair("save",&save_cmd));
+             ^
+make: *** [src/server_interface/commands.o] Error 1
+16:38:32 **** Incremental Build of configuration Debug for project lgs ****
+make all 
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+In file included from ../src/server_interface/commands.cpp:9:0:
+../src/server_interface/commands.h:12:18: error: ‘string’ is not a member of ‘std’
+ typedef std::map<std::string,cmd> RegCmd;
+                  ^
+../src/server_interface/commands.h:12:18: error: ‘string’ is not a member of ‘std’
+../src/server_interface/commands.h:12:33: error: template argument 1 is invalid
+ typedef std::map<std::string,cmd> RegCmd;
+                                 ^
+../src/server_interface/commands.h:12:33: error: template argument 3 is invalid
+../src/server_interface/commands.h:12:33: error: template argument 4 is invalid
+../src/server_interface/commands.h:12:41: error: invalid type in declaration before ‘;’ token
+ typedef std::map<std::string,cmd> RegCmd;
+                                         ^
+../src/server_interface/commands.cpp:12:10: error: ‘string’ is not a member of ‘std’
+ std::map<std::string,s_cmd> RegCmd;
+          ^
+../src/server_interface/commands.cpp:12:10: error: ‘string’ is not a member of ‘std’
+../src/server_interface/commands.cpp:12:27: error: template argument 1 is invalid
+ std::map<std::string,s_cmd> RegCmd;
+                           ^
+../src/server_interface/commands.cpp:12:27: error: template argument 3 is invalid
+../src/server_interface/commands.cpp:12:27: error: template argument 4 is invalid
+../src/server_interface/commands.cpp:12:35: error: invalid type in declaration before ‘;’ token
+ std::map<std::string,s_cmd> RegCmd;
                                    ^
-LGC_SmpleClent.cpp:47:34: warning: ignoring return value of ‘ssize_t read(int, void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-  read(sock,buffer,strlen(buffer));
-                                  ^
-make: *** [LGC_SmpleClent.o] Error 1
-17:05:32 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+../src/server_interface/commands.cpp:12:35: error: ‘int RegCmd’ redeclared as different kind of symbol
+In file included from ../src/server_interface/commands.cpp:9:0:
+../src/server_interface/commands.h:12:35: error: previous declaration of ‘typedef int RegCmd’
+ typedef std::map<std::string,cmd> RegCmd;
+                                   ^
+../src/server_interface/commands.cpp: In function ‘void register_server_cmd()’:
+../src/server_interface/commands.cpp:18:13: error: request for member ‘insert’ in ‘server_cmd’, which is of non-class type ‘RegCmd {aka int}’
+  server_cmd.insert(std::make_pair("save",&s_cmd::save_cmd));
+             ^
+../src/server_interface/commands.cpp:18:43: error: ‘s_cmd’ is not a class or namespace
+  server_cmd.insert(std::make_pair("save",&s_cmd::save_cmd));
+                                           ^
+make: *** [src/server_interface/commands.o] Error 1
+16:38:53 **** Incremental Build of configuration Debug for project lgs ****
 make all 
-g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
-LGC_SmpleClent.cpp: In function ‘int main()’:
-LGC_SmpleClent.cpp:43:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  sprintf("hello",buffer);
-                        ^
-LGC_SmpleClent.cpp:43:24: warning: format not a string literal and no format arguments [-Wformat-security]
-LGC_SmpleClent.cpp:46:15: warning: format not a string literal and no format arguments [-Wformat-security]
-  printf(buffer);
-               ^
-LGC_SmpleClent.cpp:23:7: warning: unused variable ‘cmd’ [-Wunused-variable]
-  char cmd [30];
-       ^
-LGC_SmpleClent.cpp:44:10: warning: unused variable ‘w’ [-Wunused-variable]
-  ssize_t w =write(sock,buffer,sizeof(buffer));
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+../src/server_interface/commands.cpp:12:10: error: ‘string’ is not a member of ‘std’
+ std::map<std::string,s_cmd> RegCmd;
           ^
-LGC_SmpleClent.cpp:45:10: warning: unused variable ‘r’ [-Wunused-variable]
-  ssize_t r = read(sock,buffer,sizeof(buffer));
-          ^
-LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
-LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-  write(sock, sndLine,strlen(sndLine));
-                                      ^
-g++ -o LGC_SmpleClent LGC_SmpleClent.o 
-17:05:40 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+../src/server_interface/commands.cpp:12:10: error: ‘string’ is not a member of ‘std’
+../src/server_interface/commands.cpp:12:27: error: template argument 1 is invalid
+ std::map<std::string,s_cmd> RegCmd;
+                           ^
+../src/server_interface/commands.cpp:12:27: error: template argument 3 is invalid
+../src/server_interface/commands.cpp:12:27: error: template argument 4 is invalid
+../src/server_interface/commands.cpp:12:35: error: invalid type in declaration before ‘;’ token
+ std::map<std::string,s_cmd> RegCmd;
+                                   ^
+../src/server_interface/commands.cpp: In function ‘void register_server_cmd()’:
+../src/server_interface/commands.cpp:17:9: error: expected ‘;’ before ‘server_cmd’
+  RegCmd server_cmd;
+         ^
+../src/server_interface/commands.cpp:17:19: warning: statement has no effect [-Wunused-value]
+  RegCmd server_cmd;
+                   ^
+../src/server_interface/commands.cpp:18:2: error: ‘server_cmd’ was not declared in this scope
+  server_cmd.insert(std::make_pair("save",&s_cmd::save_cmd));
+  ^
+../src/server_interface/commands.cpp:18:43: error: ‘s_cmd’ is not a class or namespace
+  server_cmd.insert(std::make_pair("save",&s_cmd::save_cmd));
+                                           ^
+make: *** [src/server_interface/commands.o] Error 1
+16:40:15 **** Incremental Build of configuration Debug for project lgs ****
 make all 
-make: Nothing to be done for `all'.
-17:06:51 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
-make all 
-g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
-LGC_SmpleClent.cpp: In function ‘int main()’:
-LGC_SmpleClent.cpp:43:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  sprintf("hello",buffer);
-                        ^
-LGC_SmpleClent.cpp:43:24: warning: format not a string literal and no format arguments [-Wformat-security]
-LGC_SmpleClent.cpp:46:15: warning: format not a string literal and no format arguments [-Wformat-security]
-  printf(buffer);
-               ^
-LGC_SmpleClent.cpp:23:7: warning: unused variable ‘cmd’ [-Wunused-variable]
-  char cmd [30];
-       ^
-LGC_SmpleClent.cpp:44:10: warning: unused variable ‘w’ [-Wunused-variable]
-  ssize_t w =write(sock,buffer,sizeof(buffer));
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+../src/server_interface/commands.cpp:12:10: error: ‘string’ is not a member of ‘std’
+ std::map<std::string,s_cmd> RegCmd;
           ^
-LGC_SmpleClent.cpp:45:10: warning: unused variable ‘r’ [-Wunused-variable]
-  ssize_t r = read(sock,buffer,sizeof(buffer));
-          ^
-LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
-LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-  write(sock, sndLine,strlen(sndLine));
-                                      ^
-g++ -o LGC_SmpleClent LGC_SmpleClent.o 
-17:07:46 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+../src/server_interface/commands.cpp:12:10: error: ‘string’ is not a member of ‘std’
+../src/server_interface/commands.cpp:12:27: error: template argument 1 is invalid
+ std::map<std::string,s_cmd> RegCmd;
+                           ^
+../src/server_interface/commands.cpp:12:27: error: template argument 3 is invalid
+../src/server_interface/commands.cpp:12:27: error: template argument 4 is invalid
+../src/server_interface/commands.cpp:12:35: error: invalid type in declaration before ‘;’ token
+ std::map<std::string,s_cmd> RegCmd;
+                                   ^
+../src/server_interface/commands.cpp: In function ‘void register_server_cmd()’:
+../src/server_interface/commands.cpp:17:9: error: expected ‘;’ before ‘server_cmd’
+  RegCmd server_cmd;
+         ^
+../src/server_interface/commands.cpp:17:19: warning: statement has no effect [-Wunused-value]
+  RegCmd server_cmd;
+                   ^
+../src/server_interface/commands.cpp:18:2: error: ‘server_cmd’ was not declared in this scope
+  server_cmd.insert(std::make_pair("save",&s_cmd::save_cmd));
+  ^
+../src/server_interface/commands.cpp:18:43: error: ‘s_cmd’ is not a class or namespace
+  server_cmd.insert(std::make_pair("save",&s_cmd::save_cmd));
+                                           ^
+make: *** [src/server_interface/commands.o] Error 1
+16:43:13 **** Incremental Build of configuration Debug for project lgs ****
 make all 
-g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
-LGC_SmpleClent.cpp: In function ‘int main()’:
-LGC_SmpleClent.cpp:43:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  sprintf("hello",buffer);
-                        ^
-LGC_SmpleClent.cpp:43:24: warning: format not a string literal and no format arguments [-Wformat-security]
-LGC_SmpleClent.cpp:46:15: warning: format not a string literal and no format arguments [-Wformat-security]
-  printf(buffer);
-               ^
-LGC_SmpleClent.cpp:23:7: warning: unused variable ‘cmd’ [-Wunused-variable]
-  char cmd [30];
-       ^
-LGC_SmpleClent.cpp:44:10: warning: unused variable ‘w’ [-Wunused-variable]
-  ssize_t w =write(sock,buffer,sizeof(buffer));
-          ^
-LGC_SmpleClent.cpp:45:10: warning: unused variable ‘r’ [-Wunused-variable]
-  ssize_t r = read(sock,buffer,sizeof(buffer));
-          ^
-LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
-LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-  write(sock, sndLine,strlen(sndLine));
-                                      ^
-g++ -o LGC_SmpleClent LGC_SmpleClent.o 
-17:08:46 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+../src/server_interface/commands.cpp: In function ‘void register_server_cmd()’:
+../src/server_interface/commands.cpp:22:43: error: ‘s_cmd’ is not a class or namespace
+  server_cmd.insert(std::make_pair("save",&s_cmd::save_cmd));
+                                           ^
+make: *** [src/server_interface/commands.o] Error 1
+16:43:35 **** Incremental Build of configuration Debug for project lgs ****
 make all 
-g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
-LGC_SmpleClent.cpp: In function ‘int main()’:
-LGC_SmpleClent.cpp:41:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  sprintf("hello",buffer);
-                        ^
-LGC_SmpleClent.cpp:41:24: warning: format not a string literal and no format arguments [-Wformat-security]
-LGC_SmpleClent.cpp:44:15: warning: format not a string literal and no format arguments [-Wformat-security]
-  printf(buffer);
-               ^
-LGC_SmpleClent.cpp:42:10: warning: unused variable ‘w’ [-Wunused-variable]
-  ssize_t w =write(sock,buffer,sizeof(buffer));
-          ^
-LGC_SmpleClent.cpp:43:10: warning: unused variable ‘r’ [-Wunused-variable]
-  ssize_t r = read(sock,buffer,sizeof(buffer));
-          ^
-LGC_SmpleClent.cpp:23:7: warning: unused variable ‘cmd’ [-Wunused-variable]
-  char cmd [30];
-       ^
-LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
-LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-  write(sock, sndLine,strlen(sndLine));
-                                      ^
-g++ -o LGC_SmpleClent LGC_SmpleClent.o 
-17:09:47 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+../src/server_interface/commands.cpp: In function ‘void register_server_cmd()’:
+../src/server_interface/commands.cpp:22:43: error: ‘s_cmd’ is not a class or namespace
+  server_cmd.insert(std::make_pair("save",&s_cmd::save_cmd));
+                                           ^
+make: *** [src/server_interface/commands.o] Error 1
+16:44:05 **** Incremental Build of configuration Debug for project lgs ****
 make all 
-make: Nothing to be done for `all'.
-17:14:30 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+../src/server_interface/commands.cpp: In function ‘void register_server_cmd()’:
+../src/server_interface/commands.cpp:22:43: error: ‘s_cmd’ is not a class or namespace
+  server_cmd.insert(std::make_pair("save",&s_cmd::save_cmd));
+                                           ^
+make: *** [src/server_interface/commands.o] Error 1
+16:46:27 **** Incremental Build of configuration Debug for project lgs ****
 make all 
-make: Nothing to be done for `all'.
-17:15:37 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
-make all 
-make: Nothing to be done for `all'.
-17:15:44 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
-make all 
-make: Nothing to be done for `all'.
-17:17:32 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
-make all 
-g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
-LGC_SmpleClent.cpp: In function ‘int main()’:
-LGC_SmpleClent.cpp:41:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  sprintf("hello",buffer);
-                        ^
-LGC_SmpleClent.cpp:41:24: warning: format not a string literal and no format arguments [-Wformat-security]
-LGC_SmpleClent.cpp:44:15: warning: format not a string literal and no format arguments [-Wformat-security]
-  printf(buffer);
-               ^
-LGC_SmpleClent.cpp:42:10: warning: unused variable ‘w’ [-Wunused-variable]
-  ssize_t w =write(sock,buffer,sizeof(buffer));
-          ^
-LGC_SmpleClent.cpp:43:10: warning: unused variable ‘r’ [-Wunused-variable]
-  ssize_t r = read(sock,buffer,sizeof(buffer));
-          ^
-LGC_SmpleClent.cpp:22:6: warning: unused variable ‘bytes_rcv’ [-Wunused-variable]
-  int bytes_rcv;
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+../src/server_interface/commands.cpp: In function ‘const void save_cmd()’:
+../src/server_interface/commands.cpp:18:21: error: new declaration ‘const void save_cmd()’
+ const void save_cmd(){}
+                     ^
+In file included from ../src/server_interface/commands.cpp:9:0:
+../src/server_interface/commands.h:15:6: error: ambiguates old declaration ‘void save_cmd()’
+ void save_cmd();
       ^
-LGC_SmpleClent.cpp:23:7: warning: unused variable ‘cmd’ [-Wunused-variable]
-  char cmd [30];
-       ^
-LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
-LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-  write(sock, sndLine,strlen(sndLine));
-                                      ^
-g++ -o LGC_SmpleClent LGC_SmpleClent.o 
-17:20:23 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+make: *** [src/server_interface/commands.o] Error 1
+16:46:49 **** Incremental Build of configuration Debug for project lgs ****
 make all 
-g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
-LGC_SmpleClent.cpp: In function ‘int main()’:
-LGC_SmpleClent.cpp:41:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  sprintf("hello",buffer);
-                        ^
-LGC_SmpleClent.cpp:41:24: warning: format not a string literal and no format arguments [-Wformat-security]
-LGC_SmpleClent.cpp:42:10: warning: unused variable ‘w’ [-Wunused-variable]
-  ssize_t w =write(sock,buffer,sizeof(buffer));
-          ^
-LGC_SmpleClent.cpp:43:10: warning: unused variable ‘r’ [-Wunused-variable]
-  ssize_t r = read(sock,buffer,sizeof(buffer));
-          ^
-LGC_SmpleClent.cpp:22:6: warning: unused variable ‘bytes_rcv’ [-Wunused-variable]
-  int bytes_rcv;
-      ^
-LGC_SmpleClent.cpp:23:7: warning: unused variable ‘cmd’ [-Wunused-variable]
-  char cmd [30];
-       ^
-LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
-LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-  write(sock, sndLine,strlen(sndLine));
-                                      ^
-g++ -o LGC_SmpleClent LGC_SmpleClent.o 
-17:23:23 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/stl_tree.h:61,
+                 from /usr/include/c++/4.8/map:60,
+                 from ../src/server_interface/commands.h:10,
+                 from ../src/server_interface/commands.cpp:9:
+/usr/include/c++/4.8/bits/stl_pair.h: In instantiation of ‘std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = const char*; _U2 = const void (*)(); _T1 = const std::basic_string<char>; _T2 = void (*)()]’:
+../src/server_interface/commands.cpp:22:52:   required from here
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: error: invalid conversion from ‘const void (*)()’ to ‘void (*)()’ [-fpermissive]
+  : first(__p.first), second(__p.second) { }
+                                       ^
+make: *** [src/server_interface/commands.o] Error 1
+18:05:48 **** Build of configuration Debug for project lgs ****
 make all 
-g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
-LGC_SmpleClent.cpp: In function ‘int main()’:
-LGC_SmpleClent.cpp:42:10: warning: unused variable ‘w’ [-Wunused-variable]
-  ssize_t w =write(sock,buffer,sizeof(buffer));
-          ^
-LGC_SmpleClent.cpp:43:10: warning: unused variable ‘r’ [-Wunused-variable]
-  ssize_t r = read(sock,buffer,sizeof(buffer));
-          ^
-LGC_SmpleClent.cpp:22:6: warning: unused variable ‘bytes_rcv’ [-Wunused-variable]
-  int bytes_rcv;
-      ^
-LGC_SmpleClent.cpp:23:7: warning: unused variable ‘cmd’ [-Wunused-variable]
-  char cmd [30];
-       ^
-LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
-LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-  write(sock, sndLine,strlen(sndLine));
-                                      ^
-g++ -o LGC_SmpleClent LGC_SmpleClent.o 
-17:24:50 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/stl_tree.h:61,
+                 from /usr/include/c++/4.8/map:60,
+                 from ../src/server_interface/commands.h:10,
+                 from ../src/server_interface/commands.cpp:9:
+/usr/include/c++/4.8/bits/stl_pair.h: In instantiation of ‘std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = const char*; _U2 = const void (*)(); _T1 = const std::basic_string<char>; _T2 = void (*)()]’:
+../src/server_interface/commands.cpp:23:52:   required from here
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: error: invalid conversion from ‘const void (*)()’ to ‘void (*)()’ [-fpermissive]
+  : first(__p.first), second(__p.second) { }
+                                       ^
+make: *** [src/server_interface/commands.o] Error 1
+20:22:22 **** Incremental Build of configuration Debug for project lgs ****
 make all 
-make: Nothing to be done for `all'.
-17:25:22 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/stl_tree.h:61,
+                 from /usr/include/c++/4.8/map:60,
+                 from ../src/server_interface/commands.h:10,
+                 from ../src/server_interface/commands.cpp:9:
+/usr/include/c++/4.8/bits/stl_pair.h: In instantiation of ‘std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = const char*; _U2 = const void (*)(); _T1 = const std::basic_string<char>; _T2 = void (*)()]’:
+../src/server_interface/commands.cpp:23:52:   required from here
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: error: invalid conversion from ‘const void (*)()’ to ‘void (*)()’ [-fpermissive]
+  : first(__p.first), second(__p.second) { }
+                                       ^
+make: *** [src/server_interface/commands.o] Error 1
+20:22:55 **** Incremental Build of configuration Debug for project lgs ****
 make all 
-make: Nothing to be done for `all'.
-17:26:37 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
-make all 
-g++ -O2 -g -Wall -fmessage-length=0   -c -o LGC_SmpleClent.o LGC_SmpleClent.cpp
-LGC_SmpleClent.cpp: In function ‘int main()’:
-LGC_SmpleClent.cpp:22:6: warning: unused variable ‘bytes_rcv’ [-Wunused-variable]
-  int bytes_rcv;
-      ^
-LGC_SmpleClent.cpp:23:7: warning: unused variable ‘cmd’ [-Wunused-variable]
-  char cmd [30];
-       ^
-LGC_SmpleClent.cpp:42:10: warning: unused variable ‘w’ [-Wunused-variable]
-  ssize_t w =write(sock,buffer,sizeof(buffer));
-          ^
-LGC_SmpleClent.cpp:43:10: warning: unused variable ‘r’ [-Wunused-variable]
-  ssize_t r = read(sock,buffer,sizeof(buffer));
-          ^
-LGC_SmpleClent.cpp: In function ‘void str_cli(FILE*, int)’:
-LGC_SmpleClent.cpp:13:38: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-  write(sock, sndLine,strlen(sndLine));
-                                      ^
-g++ -o LGC_SmpleClent LGC_SmpleClent.o 
-17:29:57 **** Incremental Build of configuration Default for project LGC_SmpleClent ****
-make all 
-make: Nothing to be done for `all'.
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/stl_tree.h:61,
+                 from /usr/include/c++/4.8/map:60,
+                 from ../src/server_interface/commands.h:10,
+                 from ../src/server_interface/commands.cpp:9:
+/usr/include/c++/4.8/bits/stl_pair.h: In instantiation of ‘std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = const char*; _U2 = const void (*)(); _T1 = const std::basic_string<char>; _T2 = void (*)()]’:
+../src/server_interface/commands.cpp:23:52:   required from here
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: error: invalid conversion from ‘const void (*)()’ to ‘void (*)()’ [-fpermissive]
+  : first(__p.first), second(__p.second) { }
+                                       ^
+make: *** [src/server_interface/commands.o] Error 1

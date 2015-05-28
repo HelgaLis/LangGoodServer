@@ -1,0 +1,22 @@
+/*
+ * commands.cpp
+
+ *
+ *  Created on: May 28, 2015
+ *      Author: helgalis
+ */
+
+#include  "commands.h"
+#include <map>
+typedef void (*cmd)(void);
+typedef std::map<std::string,cmd> RegCmd;
+RegCmd server_cmd;
+void save_cmd(){}
+
+void register_server_cmd(){
+
+	server_cmd.insert(std::make_pair("save",&save_cmd));
+}
+
+
+

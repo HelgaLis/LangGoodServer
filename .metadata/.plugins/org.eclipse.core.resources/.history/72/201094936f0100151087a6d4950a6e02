@@ -1,0 +1,23 @@
+package simpleClient;
+import java.net.*;
+import java.io.*;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	private Socket createSocket(int port, String host){
+		
+		try{
+			return new Socket(host, port);
+		}
+		catch(UnknownHostException e){
+			System.err.println(e);
+		}
+		catch(IOException e){
+			System.err.println(e);
+		}
+		return null;
+	}
+}

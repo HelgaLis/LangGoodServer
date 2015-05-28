@@ -1,0 +1,19 @@
+/*
+ * commands.cpp
+
+ *
+ *  Created on: May 28, 2015
+ *      Author: helgalis
+ */
+
+#include  "commands.h"
+#include <map>
+void save_cmd(){}
+
+void register_server_cmd(){
+	ServerCmd server_cmd;
+	server_cmd.insert(std::pair("save",&save_cmd));
+}
+
+
+

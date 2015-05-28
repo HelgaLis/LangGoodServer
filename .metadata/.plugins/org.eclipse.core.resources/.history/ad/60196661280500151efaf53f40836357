@@ -1,0 +1,15 @@
+/*
+ * commands.cpp
+
+ *
+ *  Created on: May 28, 2015
+ *      Author: helgalis
+ */
+#include  "commands.h"
+
+void register_server_cmd(){
+	ServerCmd server_cmd;
+}
+
+
+

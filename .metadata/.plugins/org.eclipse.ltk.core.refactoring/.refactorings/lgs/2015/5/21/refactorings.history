@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;lgs/src/create_socket&apos; to &apos;create_socket.h&apos;" description="Rename resource &apos;create_socket&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/create_socket" name="create_socket.h" stamp="1432374531104" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;lgs/src/server_engine/stats.h&apos; to &apos;statistics_engine.h&apos;" description="Rename resource &apos;stats.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/server_engine/stats.h" name="statistics_engine.h" stamp="1432374679102" updateReferences="true"/>
+</session>

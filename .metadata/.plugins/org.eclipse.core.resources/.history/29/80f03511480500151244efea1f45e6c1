@@ -1,0 +1,8 @@
+#include <regex>
+#include "statistics_engine.h"
+
+void update_statistic_status(){}
+void calculate_statistic(){
+
+}
+void clear_statistic_data(){}

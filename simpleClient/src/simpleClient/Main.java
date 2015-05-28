@@ -1,22 +1,69 @@
-package simpleClient;
+ package simpleClient;
 import java.net.*;
+import java.nio.channels.IllegalBlockingModeException;
 import java.nio.charset.Charset;
 import java.nio.charset.CharsetEncoder;
 import java.nio.charset.spi.CharsetProvider;
+import java.util.ArrayList;
+import java.util.Scanner;
 import java.io.*;
 public class Main {
-
+	static Socket con = null;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		ArrayList<String> inLines = new ArrayList<>();
+		String inStr;
+		Scanner userIn = new Scanner(System.in);
+		do{
+			inStr = userIn.nextLine();
+			inLines.add(inStr);
+		}while(!inStr.endsWith("."));
+		sendMsg(inLines);
+		//System.console().args.wait();
+		
+	}
+	private static void recieveMsg(){
+		
+	}
+	private static void sendMsg(ArrayList<String> msg){
+		try{
+			OutputStream out = con.getOutputStream();
+			Writer send  = new OutputStreamWriter(out,Charset.forName("UTF-8"));
+			for (String str : msg) {
+				send.write(str);
+				send.flush();
+			}
+		}
+		catch(IOException e){
+			
+		}
+		catch(IllegalBlockingModeException e){
+			
+		}
+		
 		
 	}
 	private void createSocket(int port, String host){
 		Socket con = null;
 		try{
-			con =  new Socket(host, port);
+			InetAddress addr = InetAddress.getByName(host);
+			con =  new Socket(addr, port);
+			StringBuffer recievedMsg = new StringBuffer();
+			InputStream in = con.getInputStream();
+			int ch;
+			while((ch = in.read())!=-1){
+				recievedMsg.append((char)ch);
+				if(ch==Character.LINE_SEPARATOR)
+					break;
+			}
+			System.out.println(recievedMsg);
 			Writer send = new OutputStreamWriter(con.getOutputStream(), Charset.forName("UTF-8"));
-			BufferedInputStream buffer = new BufferedInputStream(con.getInputStream());
-			InputStreamReader recieve = new InputStreamReader(buffer, "UTF-8");
+			//test msg
+			String msg = "Hello";
+			send.write(msg);
+			send.flush();
+			//BufferedInputStream buffer = new BufferedInputStream(con.getInputStream());
+			//InputStreamReader recieve = new InputStreamReader(buffer, "UTF-8");
 		}
 		catch(UnknownHostException e){
 			System.err.println(e);

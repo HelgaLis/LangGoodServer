@@ -1,6 +1,19 @@
-16:34:49 **** Incremental Build of configuration Debug for project lgs ****
+20:22:55 **** Incremental Build of configuration Debug for project lgs ****
 make all 
-make: Nothing to be done for `all'.
+Building file: ../src/server_interface/commands.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_interface/commands.d" -MT"src/server_interface/commands.d" -o "src/server_interface/commands.o" "../src/server_interface/commands.cpp"
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/stl_tree.h:61,
+                 from /usr/include/c++/4.8/map:60,
+                 from ../src/server_interface/commands.h:10,
+                 from ../src/server_interface/commands.cpp:9:
+/usr/include/c++/4.8/bits/stl_pair.h: In instantiation of ‘std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = const char*; _U2 = const void (*)(); _T1 = const std::basic_string<char>; _T2 = void (*)()]’:
+../src/server_interface/commands.cpp:23:52:   required from here
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: error: invalid conversion from ‘const void (*)()’ to ‘void (*)()’ [-fpermissive]
+  : first(__p.first), second(__p.second) { }
+                                       ^
+make: *** [src/server_interface/commands.o] Error 1
 
-16:34:49 Build Finished (took 79ms)
+20:22:56 Build Finished (took 1s.285ms)
 

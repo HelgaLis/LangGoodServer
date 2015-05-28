@@ -1,0 +1,14 @@
+INDEX VERSION 1.127+/home/helgalis/Documents/git/.metadata/.plugins/org.eclipse.jdt.core
+2889510990.index
+4237667720.index
+409803160.index
+447461646.index
+949004332.index
+236195437.index
+2707785229.index
+3149562751.index
+2350502988.index
+3643150625.index
+1231349956.index
+4195934414.index
+96467225.index

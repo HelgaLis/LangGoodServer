@@ -1,0 +1,28 @@
+package simpleClient;
+import java.net.*;
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetEncoder;
+import java.nio.charset.spi.CharsetProvider;
+import java.io.*;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+	private Socket createSocket(int port, String host){
+		Socket con = null;
+		try{
+			con =  new Socket(host, port);
+			Writer send = new OutputStreamWriter(con.getOutputStream(), Charset.forName("UTF-8"));
+			
+		}
+		catch(UnknownHostException e){
+			System.err.println(e);
+		}
+		catch(IOException e){
+			System.err.println(e);
+		}
+		return null;
+	}
+}

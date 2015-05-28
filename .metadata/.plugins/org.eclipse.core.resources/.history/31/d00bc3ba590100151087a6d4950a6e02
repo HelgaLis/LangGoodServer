@@ -1,0 +1,22 @@
+/*
+ * interface.cpp
+ *
+ *  Created on: May 23, 2015
+ *      Author: helgalis
+ */
+;
+#include "interface.h";
+#include "string.h";
+#include "../global.h";
+
+
+char * read_line(){
+char buffer[MAX_LINE_LEN];
+buffer="";
+return buffer;
+}
+void start_engine(){
+	std::string currentLine(this<-read_line());
+}
+
+
