@@ -8,8 +8,13 @@
 #ifndef SRC_SERVER_ENGINE_STATISTICS_ENGINE_H_
 #define SRC_SERVER_ENGINE_STATISTICS_ENGINE_H_
 #include <map>
+
 typedef std::map<std::wstring,uint> Statistic;
-Statistic curr_data;
+Statistic curr_statistic;
+
+void update_statistic_status();
+void calculate_statistic();
+void clear_statistic_data();
 
 
 
