@@ -7,7 +7,8 @@
 
 #ifndef SRC_SERVER_INTERFACE_RESPONSE_H_
 #define SRC_SERVER_INTERFACE_RESPONSE_H_
-
+#include <string.h>
+wchar_t response(const int code, const std::wstring * lines, const unsigned int lines_count=0);
 
 
 

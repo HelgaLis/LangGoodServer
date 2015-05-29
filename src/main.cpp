@@ -10,10 +10,8 @@
 #include "create_socket.h";
 #include  "server_interface/message.h"
 #include  "server_interface/interface.h"
-#define isvalidsock(s) ( ( s ) >= 0 )
 
-
-void server(int client_sock, int server_sock) {
+void start_client_session(int client_sock, int server_sock) {
 	//недописано, нужно уточнять реализацию
 	pid_t pid;
 	        if ( (pid = fork()) == 0) {
@@ -24,8 +22,7 @@ void server(int client_sock, int server_sock) {
 	            close(client_sock);
 	        }
 }
-
-int main() {
+void start_server(){
 	int server_sock = create_socket();
 	struct sockaddr client_address;
 	socklen_t addrLen= sizeof(client_address);
@@ -33,7 +30,10 @@ int main() {
 		int client_sock = accept(server_sock, &client_address,&addrLen);
 		if (!isvalidsock(client_sock))
 			error(1, errno, "accept call failed");
-		server(client_sock,server_sock);
+		start_client_session(client_sock,server_sock);
 	}
+}
+int main() {
+	start_server();
 }
 

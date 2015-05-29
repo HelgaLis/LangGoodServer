@@ -9,7 +9,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <errno.h>
-#define isvalidsock(s) ( ( s ) >= 0 )
+
 int create_socket(){
 struct sockaddr_in local;
 	int server_sock;
@@ -21,7 +21,7 @@ struct sockaddr_in local;
 	if(!isvalidsock(server_sock))
 		error(1, errno, "socket call failed");
 	if(setsockopt( server_sock, SOL_SOCKET, SO_REUSEADDR, &on,sizeof( on )))
-		   error( 1, errno, "setsockopt call failure" );
+		   error( 1, errno, "set socket option call failure" );
 
 	if(bind(server_sock,(struct sockaddr*)&local,sizeof(local)))
 	   error(1, errno,"bind call failure");
