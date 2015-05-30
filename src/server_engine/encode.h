@@ -8,7 +8,7 @@
 #ifndef SRC_SERVER_ENGINE_ENCODE_H_
 #define SRC_SERVER_ENGINE_ENCODE_H_
 
-
+std::wstring encode(std::string &input_str);
 
 
 

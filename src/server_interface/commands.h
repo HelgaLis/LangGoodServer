@@ -15,12 +15,13 @@
 typedef void (*s_cmd)(void);
 std::string curr_line;
 std::map<std::string,s_cmd> server_cmd;
+std::string get_cmd_args();
 void set_text_cmd();
 void set_line_cmd();
 void getSavedStatisticsFileList();
 const void save_cmd();
-void append_cmd();
 const void load_cmd();
+const void append_cmd();
 const void exit_cmd();
 void initialize_cmd();
 
